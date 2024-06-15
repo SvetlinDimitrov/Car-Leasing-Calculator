@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarLeasingCalculator</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<h1 class="header">Car Leasing Calculator</h1>
+
+<div class="container-input">
+    <div class="container-input--field">
+        <label class="container-input__filed--label" for="carType">Car Type</label>
+        <select id="carType">
+            <!-- Add options here -->
+        </select>
+    </div>
+    <div class="container-input--field">
+        <label class="container-input__filed--label" for="leasePeriod">Lease period (months)</label>
+        <select id="leasePeriod">
+            <!-- Add options here -->
+        </select>
+    </div>
+</div>
+
+<div class="container-input">
+    <div class="container-input--field">
+        <label class="container-input__filed--label" for="carValueFromText">Car Value(€10,000 - €200,000):</label>
+        <input type="number" id="carValueFromText"/>
+    </div>
+    <div class="container-input--field">
+        <label class="container-input__filed--label" for="downPaymentFromText">Down Payment (10% - 50%)</label>
+        <input type="number" id="downPaymentFromText"/>
+    </div>
+</div>
+
+<div class="container-input">
+    <input type="range" id="carValue"/>
+    <input type="range" id="downPayment"/>
+</div>
+
+<hr>
+
+<h2 class="second-header">Leasing Details</h2>
+
+<div class="leasing-details">
+    <div class="leasing-details__column">
+        <p>Total Leasing Cost: €<span id="totalLeasingCost"></span></p>
+        <p>Down Payment: €<span id="downPaymentValue"></span></p>
+    </div>
+
+    <div class="leasing-details__divider"></div>
+
+    <div class="leasing-details__column">
+        <p>Monthly Instalment: €<span id="monthlyInstalment"></span></p>
+        <p>Interest Rate: <span id="interestRate"></span></p>
+    </div>
+</div>
+
+<script type="module" src="js/index.js"></script>
+</body>
+</html>
