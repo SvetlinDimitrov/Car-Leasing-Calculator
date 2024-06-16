@@ -15,4 +15,4 @@ setup.carValueInput.addEventListener('input', calculateTotalLeasingCost);
 setup.carValueFromTextInput.addEventListener('change', calculateTotalLeasingCost);
 setup.downPaymentInput.addEventListener('input', calculateTotalLeasingCost);
 setup.downPaymentFromTextInput.addEventListener('change', calculateTotalLeasingCost);
-businessComponents.interestRate.addEventListener('change', calculateTotalLeasingCost);
+businessComponents.interestRate.addEventListener('interestRateChanged', calculateTotalLeasingCost);

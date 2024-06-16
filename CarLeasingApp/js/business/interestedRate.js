@@ -8,7 +8,13 @@ export function updateInterestRate() {
     } else {
         rate = 3.7;
     }
+
     businessComponents.interestRate.textContent = `${rate}%`;
+
+    // Create a new event
+    const event = new Event('interestRateChanged');
+    // Dispatch the event
+    businessComponents.interestRate.dispatchEvent(event);
 }
 
 setup.carTypeSelect.addEventListener('change', updateInterestRate);
