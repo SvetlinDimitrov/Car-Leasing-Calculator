@@ -3,7 +3,7 @@ export function setupCarValue() {
     const carValueFromTextInput = document.getElementById('carValueFromText');
 
     carValueInput.min = 10000;
-    carValueInput.max = 20000;
+    carValueInput.max = 200000;
     carValueFromTextInput.value = carValueInput.min;
     carValueInput.value = carValueInput.min;
 

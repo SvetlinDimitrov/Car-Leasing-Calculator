@@ -1,11 +1,12 @@
-import { setupCarType } from './setup/setupCarType.js';
-import { setupLeasePeriod } from './setup/setupLeasePeriod.js';
-import { setupCarValue } from './setup/setupCarValue.js';
-import { setupDownPayment } from './setup/setupDownPayment.js';
+import {updateDownPayment} from "./business/downPayment.js";
+import {updateInterestRate} from "./business/interestedRate.js";
+import {calculateMonthlyInstallment} from "./business/monthlyInstallment.js";
+import {calculateTotalLeasingCost} from "./business/totalLeasing.js";
 
-const setup = {
-    carTypeSelect: setupCarType(),
-    leasePeriodSelect: setupLeasePeriod(),
-    ...setupCarValue(),
-    ...setupDownPayment()
-};
+updateDownPayment();
+updateInterestRate();
+calculateMonthlyInstallment()
+calculateTotalLeasingCost();
+
+
+
