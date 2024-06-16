@@ -12,7 +12,6 @@ export function calculateMonthlyInstallment() {
     This formula is used to calculate the monthly payment of an amortizing loan,
      which is a loan where the principal is paid off over a certain period of time through regular payments.
      */
-    console.log(businessComponents.interestRate.textContent);
     const principal = setup.carValueInput.value - (setup.carValueInput.value * setup.downPaymentInput.value / 100);
     const annualInterestRate = parseFloat(businessComponents.interestRate.textContent) / 100;
     const monthlyInterestRate = annualInterestRate / 12;

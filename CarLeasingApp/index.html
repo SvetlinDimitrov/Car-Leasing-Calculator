@@ -5,39 +5,41 @@
     <title>CarLeasingCalculator</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <h1 class="header">Car Leasing Calculator</h1>
+<div class="input-wrapper">
+    <div class="input-wrapper--container">
+        <div >
+            <label  for="carType">Car Type</label>
+            <select id="carType"></select>
+        </div>
+        <div>
+            <label for="carValueFromText">Car Value(€10,000 - €200,000):</label>
+            <input type="number" id="carValueFromText"/>
+        </div>
 
-<div class="container-input">
-    <div class="container-input--field">
-        <label class="container-input__filed--label" for="carType">Car Type</label>
-        <select id="carType">
-            <!-- Add options here -->
-        </select>
+        <div>
+            <input type="range" id="carValue"/>
+        </div>
     </div>
-    <div class="container-input--field">
-        <label class="container-input__filed--label" for="leasePeriod">Lease period (months)</label>
-        <select id="leasePeriod">
-            <!-- Add options here -->
-        </select>
-    </div>
-</div>
 
-<div class="container-input">
-    <div class="container-input--field">
-        <label class="container-input__filed--label" for="carValueFromText">Car Value(€10,000 - €200,000):</label>
-        <input type="number" id="carValueFromText"/>
-    </div>
-    <div class="container-input--field">
-        <label class="container-input__filed--label" for="downPaymentFromText">Down Payment (10% - 50%)</label>
-        <input type="number" id="downPaymentFromText"/>
-    </div>
-</div>
+    <div class="input-wrapper--container">
 
-<div class="container-input">
-    <input type="range" id="carValue"/>
-    <input type="range" id="downPayment"/>
+        <div>
+            <label  for="leasePeriod">Lease period (months)</label>
+            <select id="leasePeriod"></select>
+        </div>
+
+        <div>
+            <label for="downPaymentFromText">Down Payment (10% - 50%)</label>
+            <input type="number" id="downPaymentFromText"/>
+        </div>
+        <div>
+            <input type="range" id="downPayment"/>
+        </div>
+    </div>
 </div>
 
 <hr>

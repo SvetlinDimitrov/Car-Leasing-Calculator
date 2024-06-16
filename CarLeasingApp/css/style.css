@@ -6,13 +6,13 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 80%;
-    max-width: 900px;
+    max-width: 600px;
     padding: 10px;
     border: 8px solid lightgray;
     border-radius: 10px;
     margin: 25px auto auto;
 }
+
 .header {
     font-size: 2em;
     font-weight: bold;
@@ -20,21 +20,34 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-.container-input {
+
+.input-wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-wrapper--container {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 35px;
     width: 100%;
 }
-.container-input--field {
+
+.input-wrapper--container div {
     flex: 1;
     display: flex;
     flex-direction: column;
     margin-right: 10px;
 }
-.container-input__filed--label {
+
+.input-wrapper--container div label {
     margin-bottom: 5px;
 }
+
 hr {
     border: none;
     border-top: 2px solid lightgray; /* Change color here */
@@ -43,6 +56,7 @@ hr {
     height: 1px;
     width: 100%;
 }
+
 .second-header {
     font-size: 1.5em;
     font-weight: bold;
@@ -50,6 +64,7 @@ hr {
     text-align: center;
     margin-bottom: 15px;
 }
+
 .leasing-details {
     display: flex;
     justify-content: flex-start;
@@ -58,24 +73,29 @@ hr {
     gap: 40px;
     margin-bottom: 15px;
 }
+
 .leasing-details__column {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .leasing-details__column p {
     padding: 1px;
 }
+
 .leasing-details__divider {
     width: 2px;
     background-color: lightgray;
 }
-#carValue , #downPayment {
+
+#carValue, #downPayment {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-#leasePeriod , #carType , #carValueFromText, #downPaymentFromText {
+
+#leasePeriod, #carType, #carValueFromText, #downPaymentFromText {
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -89,3 +109,58 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .leasing-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .leasing-details__divider {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        font-size: 80%;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .second-header {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 250px) {
+    body {
+        min-width: 150px;
+        padding: 10px;
+        font-size: 50%;
+    }
+
+    .header {
+        font-size: 1.2em;
+    }
+
+    .second-header {
+        font-size: 1.1em;
+    }
+
+    #leasePeriod, #carType, #carValueFromText, #downPaymentFromText {
+        padding: 1px;
+        font-size: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
