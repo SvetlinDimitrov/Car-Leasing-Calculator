@@ -73,7 +73,6 @@ hr {
     gap: 40px;
     margin-bottom: 15px;
 }
-
 .leasing-details__column {
     flex: 1;
     display: flex;
@@ -81,7 +80,7 @@ hr {
 }
 
 .leasing-details__column p {
-    padding: 1px;
+    padding: 5px;
 }
 
 .leasing-details__divider {
